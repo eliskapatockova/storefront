@@ -11,6 +11,11 @@ var SQLconnection = mysql.createConnection({
     database: "bamazon"
   });
 
+  SQLconnection.connect(function(error){
+      if (error){console.log("CONNECTION ERROR")}
+        else {console.log("CONNECTION SUCCESSFUL")}
+  });
+
   function shop () {
 
     SQLconnection.query("SELECT * FROM products", function(error, result){
@@ -23,12 +28,13 @@ var SQLconnection = mysql.createConnection({
         for(var i =0; i<result.length; i++){
             var currentItem = "id: " + result[i].item_id+ " name: " + result[i].product_name 
             + "price: $" + result[i].price;
+            console.log(currentItem);
         }
 
         inquirer.prompt([
             {
             type: "input",
-	  		name: "name",
+	  		name: "id",
 	  		message: "Enter the name of the product you'd like to buy:",
 	  		validate: function(value) {
 	  			if(isNaN(value) === false) {
@@ -51,14 +57,20 @@ var SQLconnection = mysql.createConnection({
           }
       },
         ]).then(function(response){
-            var itemName = response.name.trim();
+            var itemID = response.id;
             var  quantityDesired = response.quantityDesired;
 
             var counter;
-            for(counter = 0; counter<result.length; i++){
-                if (itemName === result[i].product_name){break;}
+            for(counter = 0; counter<result.length; counter++){
+                if (itemID === result[counter].item_id){break;}
             }
-            if(counter >= result.length){console.log("Insufficient stock.")}
+            if(counter >= result.length){console.log("Invalid Item ID."); return;}
+            if(quantityDesired > result[counter].stock_quantity){console.log("Insufficient stock."); return;}
+
+            SQLconnection.query("UPDATE products SET stock_quantity"= "stock_quantity - ? WHERE item_id = ?", [quantityDemanded, itemId]);
+            var amountDue = result[counter].price * quantityDesired;
+            console.log("Your purchase cost $" + amountDue + ". Have a nice day!");
+
         })
     })
   }
