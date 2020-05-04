@@ -1,1 +1,1 @@
-# storefront
+This program allows a shopper to explore and purchase items in the terminal. If the cutomer enters a valid item ID and a number of items not exceeding stock, items are subtracted from stock and the console displays the customer's total. If the ID is incorrect or the number of items requested exceeds stocks, an appropriate error message is displayed. 
