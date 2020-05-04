@@ -2,6 +2,8 @@ This program allows a shopper to explore and purchase items in the terminal. If 
 
 
 
-<img width="481" alt="Screen Shot 2020-05-04 at 11 16 02 AM" src="https://user-images.githubusercontent.com/59908747/80999449-94244700-8df9-11ea-8113-973b2a1116bf.png">
-<img width="512" alt="Screen Shot 2020-05-04 at 11 17 03 AM" src="https://user-images.githubusercontent.com/59908747/80999531-b0c07f00-8df9-11ea-97a1-fa1fea093963.png">
-<img width="507" alt="Screen Shot 2020-05-04 at 11 17 39 AM" src="https://user-images.githubusercontent.com/59908747/80999550-b7e78d00-8df9-11ea-9311-2f2e781c6262.png">
+<img width="551" alt="Screen Shot 2020-05-04 at 11 26 38 AM" src="https://user-images.githubusercontent.com/59908747/80999921-46f4a500-8dfa-11ea-8c51-7ce1ce86cd74.png">
+
+<img width="565" alt="Screen Shot 2020-05-04 at 11 27 05 AM" src="https://user-images.githubusercontent.com/59908747/80999924-4956ff00-8dfa-11ea-9795-1bd4fdbb4d9f.png">
+
+<img width="546" alt="Screen Shot 2020-05-04 at 11 27 29 AM" src="https://user-images.githubusercontent.com/59908747/80999929-4b20c280-8dfa-11ea-9bdb-64a194132a3b.png">
